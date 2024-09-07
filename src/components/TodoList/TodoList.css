@@ -1,0 +1,27 @@
+.TodoList {
+  padding: 0 10px 56px 10px;
+  list-style: none;
+  overflow-x: hidden;
+  /* -webkit-box-shadow: 0px 0px 91px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 91px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 91px 1px rgba(0,0,0,0.75); */
+  scroll-margin: 8px;
+  vertical-align: top;
+  overflow-y: auto;
+}
+
+
+.TodoList::-webkit-scrollbar {
+  width: 5px;
+  background: transparent; /* Fondo de la barra de desplazamiento transparente */
+}
+
+
+.TodoList::-webkit-scrollbar-track {
+  background: transparent; /* Pista de la barra de desplazamiento transparente */
+}
+
+.TodoList::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.7); /* Thumb (la parte que se mueve) en color gris con un poco de transparencia */
+  border-radius: 10px; /* Opcional: Bordes redondeados para el thumb */
+}

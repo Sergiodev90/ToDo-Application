@@ -1,0 +1,12 @@
+.Container-Loading-SVG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Loading-ITEM{
+    position: inherit;
+    width: 40%;
+    height: 4%;
+    background: none;
+}

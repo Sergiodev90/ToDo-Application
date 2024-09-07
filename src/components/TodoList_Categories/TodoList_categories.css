@@ -1,0 +1,31 @@
+.TODO-LIST-CATEGORIES--container {
+    display: flex;
+    width: 300px; /* Ajusta según el contenedor padre */
+    height: 50px;
+    overflow-x: auto; /* Permitir scroll horizontal */
+    overflow-y: hidden; /* Ocultar scroll vertical */
+    white-space: nowrap; /* Mantener los elementos en línea */
+    scrollbar-width: thin; /* Scrollbar fino en Firefox */
+    scrollbar-color: #888 transparent;
+    padding:0 0 10px 5px;
+}
+
+/* Personalización del scrollbar para navegadores WebKit (Chrome, Safari, Edge) */
+.TODO-LIST-CATEGORIES--container::-webkit-scrollbar {
+    height: 8px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+.TODO-LIST-CATEGORIES--container::-webkit-scrollbar-track {
+    background:transparent; /* Color de fondo del track del scrollbar */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.TODO-LIST-CATEGORIES--container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del scrollbar */
+    border-radius: 10px; /* Bordes redondeados del scrollbar */
+    border: 2px solid #f0f0f0; /* Espacio alrededor del scrollbar */
+}
+
+.TODO-LIST-CATEGORIES--container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color del scrollbar al pasar el mouse */
+}

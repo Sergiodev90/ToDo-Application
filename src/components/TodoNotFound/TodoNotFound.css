@@ -1,0 +1,21 @@
+.Container-Item-TodoNotFound{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container-Item-TodoNotFound p{
+    color: white;
+    font-size: large;
+    margin-bottom: none;
+}
+
+.TodoNotFound{
+    position: inherit;
+    
+    width: 60%;
+    height: 60%;
+    background-image: none;
+    background-color: inherit;
+}

@@ -1,0 +1,33 @@
+.contaienr--return--delente__item{
+    position: absolute;
+    background-color: #b4d8f5;
+    display: flex;
+    gap: 15px;
+    left:390px;
+    bottom: -35px;
+    height: 40px;
+    align-items: center;
+    padding: 10px;
+    box-shadow: #2563a4;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+  }
+  .return {
+    cursor: pointer;
+  }
+  .delete{
+    cursor: pointer;
+  }
+  
+  .return:hover{
+    color:blue;
+  }
+  .delete:hover{
+    color:blue
+  }
+  
+  .line{
+    background-color: black;
+    width: 1px;
+    height: 100%;
+  }

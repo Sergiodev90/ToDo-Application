@@ -1,0 +1,21 @@
+.EmptyTodos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.EmptyTodos p{
+    color: white;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.EmptyList{
+    position: inherit;
+    
+    width: 60%;
+    height: 60%;
+    background-image: none;
+    background-color: inherit;
+}

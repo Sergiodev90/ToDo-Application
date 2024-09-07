@@ -1,0 +1,34 @@
+.TodoCategory {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 0 8px;
+    margin-right:8px; /* Añadir márgenes para dar separación entre categorías */
+    font-size: 14px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.TodoCategory:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+.TodoCategory-input{
+    display: inline-flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 0 8px;
+    margin-right:8px; /* Añadir márgenes para dar separación entre categorías */
+    font-size: 14px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.Container-SketchPicker{
+    position: fixed;
+    top: 380px;
+    right: 400px;
+}

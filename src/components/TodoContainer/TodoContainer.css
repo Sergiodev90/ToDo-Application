@@ -1,0 +1,110 @@
+:root{
+    --sky-color-white: #f3f6fc;
+    --sky-clor-cyan-bold-600: #2563a4;
+    --sky-color-blue-800: #1D446f;
+    --neon: drop-shadow(0px 0px 3px white);
+
+}
+
+.TodoContainer--list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-row: 5;
+    grid-column: 7;
+    padding: 10px;
+    border: solid 1px;
+    border-radius: 2%;
+    background-color:#1e2f49;
+
+    overflow: visible;
+}
+.TodoContainer--list-empty{
+    justify-content: center;
+}
+
+
+.TodoContainer-Eyelashes{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 182px;
+    left: 360px;
+    height: 90vh;
+}
+
+
+.Eyelashes-TodoContainer-list{
+    width: 200px;
+    height: 58px;
+    position: relative;
+    align-items: center;
+    appearance: none;
+    background-color: #357ec2;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s, background-color 0.15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform, background-color;
+    font-size: 18px;
+    top: 50px;
+    margin: 10px 5px  30px 0;
+    cursor: pointer;
+    transition: background-color all 0.3 ease-in-out;
+    top: 40px;
+    transition: 0.3s ease-in-out;
+    
+
+}
+
+  
+  .Eyelashes-TodoContainer-list:focus {
+    box-shadow: #1D446f 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #1D446f 0 -3px 0 inset;
+  }
+  
+  /* Active state styles */
+  .active {
+    background-color: #1D446f;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #1D446f 0 -3px 0 inset, rgba(45, 35, 66, 0.5) 0 0 15px;
+    transform: translateY(0) !important;
+  }
+
+  
+  .container-total-todos__insection {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 15px;
+    font-size: 18px;
+    margin: 3px 6px 0 3px;
+    filter: drop-shadow(0 0 5px white);
+}
+/* */
+
+@media (200px <= width <= 830px){
+    .TodoContainer--list{
+        grid-row: 6;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    .Eyelashes-TodoContainer-list{
+        width: 100px;
+        height: 40px;
+    }
+  }

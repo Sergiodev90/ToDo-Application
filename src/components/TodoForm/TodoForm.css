@@ -1,0 +1,192 @@
+section {
+    width: 1000px;
+    background-color: #1e2f49;
+    padding: 33px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.25rem;
+    filter: drop-shadow(0px 0px 5px white);
+    transition: all 0.3s ease-in;
+    z-index: 3;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+    }
+  .Text-Area__Todo{
+    width: 1056px;
+    height: 20px;
+    display: flex;
+    border: none;
+    resize: none;
+    background-color: #1d446f;
+    border-radius: 0.25rem;
+    padding: 10px;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 20px;
+    overflow-y: hidden;
+    margin-top: 20px;
+
+  }
+
+  .container_TodoTag__TODO{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 276px;
+
+  }
+  .container_TodoTag_TodoCalendar{
+    display: flex;
+    /* align-items: center; */
+    /* background-color: #1D446f; */
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    /* justify-content: center; */
+    gap: 40px;
+    filter: drop-shadow(0px 0px 3px white)  ;
+  }
+
+  .Text-Area__Category {
+    display: flex;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    font-size: 16px;
+    box-shadow: none;
+    resize: none;
+    width: 521px;
+    height: 74px;
+    background-color: #1d446f;
+    padding: 20px;
+    color: white;
+    justify-content:start;
+    border:1px solid bla;
+    margin-top: 20px;
+  }
+  
+
+  .button_add--category{
+    background-color: #1e2f49;
+    width: 120px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 442px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in;
+  }
+  .button_add--category:hover {
+    filter: drop-shadow(0px 0px 3px white);
+    transition: all 0.3 ease-in;
+    color: #f9f9f9;
+  }
+
+  .Container-TodoTag {
+    width: 411px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    /* padding: 10px; */
+    background-color: transparent;
+    margin: 20px 156px 0 0 ;
+
+  }
+  .container-Recommended-Todos{
+    display: flex;
+    position: absolute;
+    bottom:410px;
+    width: 500px;
+    height: 50px;
+  }
+
+.Container-List-Reccommend{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+  
+  
+  textarea::placeholder {
+    color: #A5A5A5;
+    font-family: 'Montserrat';
+    font-weight: 400;
+  }
+  
+  textarea:focus {
+    outline-color: white;
+    transition: all 0.5s ease-in;
+  }
+  
+  .TodoForm-buttonContainer {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .TodoForm-button {
+    cursor: pointer;
+    font-size: 20px;
+    color: #202329;
+    font-weight: 400;
+    width: 120px;
+    height: 48px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Montserrat';
+  }
+  
+  .TodoForm-button--add {
+    background: #1d446f;
+    color: white;
+
+
+  }
+  .TodoForm-button--add:hover, .TodoForm-button--add:focus {
+    animation: pulse 1s;
+  }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Desplazamiento inicial hacia abajo */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su posición original */
+  }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(33, 107, 165, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 0 10px rgba(33, 107, 165, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 10px rgba(33, 107, 165, 0); /* Cambia a transparente */
+    }
+  }
+  
+  .TodoForm-button--cancel {
+    background: transparent;
+    color: white;
+  }
+
+  .TodoForm-buttonContainer{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    
+  }
