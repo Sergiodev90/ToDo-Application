@@ -152,10 +152,11 @@ function TodoForm() {
         <form onSubmit={onSubmit}>
           <label>Add Your Task:</label>
           <textarea
-            className="Text-Area__Todo"
+            className="Text-Area_Todo"
             placeholder="Study Full Stack Development"
             value={newTodoValue}
             onChange={onChangeTodo}
+
           />
           <label>Add Categories:</label>
           <div className="container_TodoTag_TodoCalendar">
@@ -174,7 +175,7 @@ function TodoForm() {
                 placeholder="Engineering, Software, Home"
                 value={newCategoryValue}
                 onChange={onChangeCategory}
-                className="Text-Area__Category"
+                className="Text-Area_Category"
               />
               <button className="button_add--category" onClick={addCategory}>
                 Add category
