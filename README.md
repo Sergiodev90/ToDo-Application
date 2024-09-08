@@ -9,10 +9,10 @@ This is To-Do Application, where you can manage your tasks with tag, filter them
 
 
 ## Screenshots
-![Init the project](https://github.com/Sergiodev90/Take-Notes-Minimalist/blob/master/public/screenshots/Captura%20de%20pantalla%202024-09-06%20142125.png)
+![Init the project](https://github.com/Sergiodev90/ToDo-Application/blob/master/public/screenshots/Captura%20de%20pantalla%202024-09-06%20142125.png)
     
-![Todo Form](https://github.com/Sergiodev90/Take-Notes-Minimalist/blob/master/public/screenshots/Captura%20de%20pantalla%202024-09-06%20142211.png)
-![With tasks](https://github.com/Sergiodev90/Take-Notes-Minimalist/blob/master/public/screenshots/Captura%20de%20pantalla%202024-09-06%20142226.png)
+![Todo Form](https://github.com/Sergiodev90/ToDo-Application/blob/master/public/screenshots/Captura%20de%20pantalla%202024-09-06%20142211.png)
+![With tasks](https://github.com/Sergiodev90/ToDo-Application/blob/master/public/screenshots/Captura%20de%20pantalla%202024-09-06%20142226.png)
 
 
 
