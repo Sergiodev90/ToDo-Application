@@ -1,0 +1,23 @@
+{
+    "files": {
+      "main.css": "/Sergiodev90/ToDo-Application/static/css/main.7a610a28.css",
+      "main.js": "/Sergiodev90/ToDo-Application/static/js/main.db9a827f.js",
+      "static/media/ArchivedList.png": "/Sergiodev90/ToDo-Application/static/media/ArchivedList.08d0c261a187e0d69e26.png",
+      "static/media/CreateTodos.svg": "/Sergiodev90/ToDo-Application/static/media/CreateTodos.0b2b352e12e2019b42ea35209dc82771.svg",
+      "static/media/CompletedEmpty.svg": "/Sergiodev90/ToDo-Application/static/media/CompletedEmpty.f7b9a25d306aecc357cdb2242d19bec8.svg",
+      "static/media/notFound.svg": "/Sergiodev90/ToDo-Application/static/media/notFound.e3cb7e5230f1927f640a86f15ca50ece.svg",
+      "static/media/takeBreak.svg": "/Sergiodev90/ToDo-Application/static/media/takeBreak.970429f526cc19b7ff51d5da8b395555.svg",
+      "static/media/EmptyPending.svg": "/Sergiodev90/ToDo-Application/static/media/EmptyPending.4c5a606c18503e0265a28c1244dadbbc.svg",
+      "index.html": "/Sergiodev90/ToDo-Application/index.html",
+      "static/media/delete.svg": "/Sergiodev90/ToDo-Application/static/media/delete.a3ad2b5515887a1aaf4b9c3d3cffb51d.svg",
+      "static/media/Loading.svg": "/Sergiodev90/ToDo-Application/static/media/Loading.80c904d88bea09aa6dd8a9667e10b9c0.svg",
+      "static/media/arrow.svg": "/Sergiodev90/ToDo-Application/static/media/arrow.4631edfaee3e486d6f6185a480d93cdd.svg",
+      "static/media/archive.svg": "/Sergiodev90/ToDo-Application/static/media/archive.8defd6458f658fae2d9e8495fc532f95.svg",
+      "main.7a610a28.css.map": "/Sergiodev90/ToDo-Application/static/css/main.7a610a28.css.map",
+      "main.db9a827f.js.map": "/Sergiodev90/ToDo-Application/static/js/main.db9a827f.js.map"
+    },
+    "entrypoints": [
+      "static/css/main.7a610a28.css",
+      "static/js/main.db9a827f.js"
+    ]
+  }
