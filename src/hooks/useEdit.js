@@ -1,6 +1,5 @@
 import { useState,useContext } from "react"
 import { TodoContext } from "../contexts/TodoContext"
-import { DraggableDroppContext } from "../contexts/DraggableDroppContext"
 
 export function useEdit({newText,id,to,color,state}){
     const [text, setText] = useState(newText)

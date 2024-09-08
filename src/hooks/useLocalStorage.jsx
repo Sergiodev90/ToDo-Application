@@ -1,9 +1,10 @@
 
-import React from 'react';
+import React,{useState} from 'react';
+
 function useLocalStorage(itemName, initialValue ) {
-  const [item, setItem] = React.useState(initialValue);
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState(false)
+  const [item, setItem] = useState(initialValue);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false)
   
     React.useEffect(()=>{
 
@@ -21,8 +22,10 @@ function useLocalStorage(itemName, initialValue ) {
   
           setItem(parsedItem);
           setLoading(false);
-        } catch(error){
-          setError(error);
+        } catch (error) {
+          if (error) {
+            setError(true); // Ahora TypeScript sabe que error es de tipo Error
+          }
         }
       }, 1000);
     },[itemName,initialValue])

@@ -101,7 +101,7 @@ function TodoProvider({ children,id, parent }) {
     saveTodos(newTodos);
   };
   
-  const editTodoText =(newText,id,to,color) =>{
+  const editTodoText =({newText,id,to,color}) =>{
       if(to === 'Todos'){
         const newTodos = todos.map((item)=>{
           if(item.id === id){
@@ -367,6 +367,3 @@ function TodoProvider({ children,id, parent }) {
 }
 
 export { TodoContext, TodoProvider };
-
-
-
