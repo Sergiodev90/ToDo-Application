@@ -101,7 +101,7 @@ function TodoProvider({ children,id, parent }) {
     saveTodos(newTodos);
   };
   
-  const editTodoText =({newText,id,to,color}) =>{
+  const editTodoText =(newText,id,to,color) =>{
       if(to === 'Todos'){
         const newTodos = todos.map((item)=>{
           if(item.id === id){
@@ -119,6 +119,7 @@ function TodoProvider({ children,id, parent }) {
           const updatedCategories = item.categories.map((category) => {
             if (category.id === id) {
               return {
+                ...category,
                 category: newText,
                 color:color
               };

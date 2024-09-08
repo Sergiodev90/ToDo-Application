@@ -87,7 +87,7 @@ function TodoSearch({ SearchValue, setSearchValue, categories, todos }) {
             </div>
 
             <ul id="list" className="dropdown-list">
-              {categories && trueCategories.map((category) => (
+              {categories && categories.map((category) => (
                   <li className="dropdown-list-item" key={category.id} style={tagStyle(category)} onClick={() => handleSendingValueCategory(category.category)}>
                     {category.category}
                   </li>

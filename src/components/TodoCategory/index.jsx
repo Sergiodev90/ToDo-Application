@@ -6,7 +6,6 @@ import { useEdit } from '../../hooks/useEdit';
 
 function TodoCategory(props) {
     const [color, setColor] = useState('');
-
     const { click, text, handleClick, handleEditText, handleEvent } = useEdit(
         {
             newText:props.category,
@@ -25,7 +24,7 @@ function TodoCategory(props) {
                 <div className="TodoCategory" style={{ backgroundColor: props.color_Category }} >
                 <p 
                     
-                    onClick={handleClick}  // Asegúrate de que la función se invoca correctamente
+                    onClick={handleClick} 
                 >
                     {props.category}
                 </p>

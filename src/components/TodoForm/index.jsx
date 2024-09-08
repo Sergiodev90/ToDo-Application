@@ -117,7 +117,6 @@ function TodoForm() {
 
         setCategoriesList([...CategoriesList, ...dict]);
         setNewCategoryValue("");
-
       } 
   
   };

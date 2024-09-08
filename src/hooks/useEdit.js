@@ -6,15 +6,17 @@ export function useEdit({newText,id,to,color,state}){
     const [click, setClick] = useState(false)
     const {editTodoText} = useContext(TodoContext)
 
-    function handleClick(){
+    function handleClick(id){
       if(state === false){
         setClick(true)
       }
+      console.log(id)
         
       }
       function handleEvent(event){
         if(event.key === 'Enter' && text.length > 0){
             setClick(false)
+            console.log(id)
             editTodoText(text,id,to,color,state)
             return true
         }
@@ -22,7 +24,9 @@ export function useEdit({newText,id,to,color,state}){
       function handleEditText(event){
         if(handleEvent){
           setText(event.target.value)
+
         }
+        
       }
 
       return {
