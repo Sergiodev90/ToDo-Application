@@ -1,37 +1,37 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { TodoCategory } from "../TodoCategory";
-import { TodoContext } from "../../contexts/TodoContext";
 import { TODO_LIST_CATEGORIES } from "../TodoList_Categories";
 import { ReactComponent as ArchiveBoxIcon } from "../../assets/svg/archive.svg";
 import { ReactComponent as ArrowIcon } from "../../assets/svg/arrow.svg";
-import { CheckboxCircular } from "../CheckBoxCircular";
 import { useEdit } from "../../hooks/useEdit";
-import './AlertToChangeState.css'
+import "./AlertToChangeState.css";
 
 function AlertToChangeState(props) {
   return (
     <div>
       <div className="contaienr--return--delente__item">
-        <span className="return" onClick={props.onUnarchived}>RETURN</span>
+        <span className="return" onClick={props.onUnarchived}>
+          RETURN
+        </span>
         <span className="line"></span>
-        <span className="delete" onClick={props.onDelete}>DELETE</span>
+        <span className="delete" onClick={props.onDelete}>
+          DELETE
+        </span>
       </div>
     </div>
   );
 }
 
 function TodoItem(props) {
-
   const { click, text, handleClick, handleEditText, handleEvent } = useEdit({
     newText: props.text,
     id: props.id,
-    to: 'Todos',
+    to: "Todos",
     state: props.isOnArchives,
   });
 
   const [expandedTodos, setExpandedTodos] = useState([]);
-  const { completed, setCompleted } = useContext(TodoContext);
-  
+
   const [open, setOpen] = useState(false);
 
   const handleToggleExpand = (id) => {
@@ -40,10 +40,6 @@ function TodoItem(props) {
     );
   };
 
-  const handleCheckboxChange = () => {
-    setCompleted(!completed);
-    props.onComplete();
-  };
 
   const handleClikReturnDeleteItem = () => {
     setOpen(!open);
@@ -51,39 +47,28 @@ function TodoItem(props) {
 
   return (
     <>
-      <CheckboxCircular
-        checked={props.completed}
-        onChange={handleCheckboxChange}
-        inArchived={props.isOnArchives}
-      />
-      <div className="ContainerAll-information">
-        <div className="Container_information">
-          <div className="Container-Information-Orary">
-            {!click && (
+        <div className="Container-Todo">
+          <div className="First-Section-Container">
+          {!click && (
               <p
-                className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}
+                className={`TodoItem-p ${
+                  props.completed && "TodoItem-p--complete"
+                }`}
                 onClick={() => handleClick()}
               >
                 {props.text}
               </p>
             )}
             {click && (
-              <input 
-                value={text} 
-                onKeyDown={handleEvent} 
-                onChange={handleEditText} 
+              <input
+                value={text}
+                onKeyDown={handleEvent}
+                onChange={handleEditText}
               />
             )}
-            <div className="Time">
-              <p>{props.startDate}</p>
-              <ArrowIcon className="ArrowIcon" />
-              <p>{props.endDate}</p>
-            </div>
-          </div>
-          <div className="Container-Second-Section">
+            <div className="container-Categories">
             <TODO_LIST_CATEGORIES>
               {props.categories.map((item) => (
-                
                 <TodoCategory
                   key={item.id}
                   id={item.id}
@@ -93,9 +78,14 @@ function TodoItem(props) {
                   color_Category={item.color}
                   isOnArchives={props.isOnArchives}
                 />
-                
               ))}
             </TODO_LIST_CATEGORIES>
+          </div>
+          </div>
+          <div className="Second-Section-Container">
+
+            <p>{props.startDate}</p>
+            <p>{props.endDate}</p>
             {!props.isOnArchives && (
               <ArchiveBoxIcon
                 className="ArchiveIcon"
@@ -116,8 +106,7 @@ function TodoItem(props) {
             )}
           </div>
         </div>
-      </div>
-      </>
+        </>
   );
 }
 

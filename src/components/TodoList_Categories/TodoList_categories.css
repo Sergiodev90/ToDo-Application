@@ -1,13 +1,9 @@
 .TODO-LIST-CATEGORIES--container {
     display: flex;
-    width: 300px; /* Ajusta según el contenedor padre */
-    height: 50px;
-    overflow-x: auto; /* Permitir scroll horizontal */
-    overflow-y: hidden; /* Ocultar scroll vertical */
-    white-space: nowrap; /* Mantener los elementos en línea */
-    scrollbar-width: thin; /* Scrollbar fino en Firefox */
-    scrollbar-color: #888 transparent;
-    padding:0 0 10px 5px;
+    flex-wrap: wrap;
+    max-width: 400px;
+    
+
 }
 
 /* Personalización del scrollbar para navegadores WebKit (Chrome, Safari, Edge) */

@@ -1,4 +1,5 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
+import { TodoMain } from "../components/TodoMain";
 import { TodoSearch } from "../components/TodoSearch";
 import { TodoList } from "../components/TodoList";
 import { TodoItem } from "../components/TodoItem";
@@ -20,7 +21,6 @@ import { Root } from "./Root";
 import { Modal } from "../components/Modal";
 import { TodoHeader } from "../components/TodoHeader";
 import { DraggableTodoItem } from "../components/DraggableTodoItem";
-
 
 function AppUI() {
   const {
@@ -49,12 +49,6 @@ function AppUI() {
     unArchivedTodo,
   } = useContext(TodoContext);
 
-
-
-
-
-
-
   // const handleDragEnd = (event) =>{
   //   const {over,active} = event
   //   setParent(over ? over.id : null);
@@ -66,7 +60,6 @@ function AppUI() {
   //     editStateTodoByDragg(parent,id)
   // },[parent,id,editStateTodoByDragg])
 
-  
   return (
     <>
       <Root>
@@ -79,14 +72,14 @@ function AppUI() {
             todos={todos}
           />
         </TodoHeader>
-            
+        <TodoMain>
+          
           <TodoContainer
             className="TodoList-Container"
             pendingTodos={pendingTodos}
             archivedTodos={archivedTodos}
             completedTodos={completedTodos}
             totalTodos={totalTodos}
-
           >
             <TodoList
               Loading={loading}
@@ -112,24 +105,30 @@ function AppUI() {
               onCompletedEmpty={() => <EmptyTodosCompleted />}
               onArchivedEmpty={() => <EmptyTodosArchived />}
               renderAll={(todo) => (
-                <DraggableTodoItem id={todo.id} key={todo.id} >
-
-                <TodoItem
-                  key={todo.id}
+                <DraggableTodoItem
                   id={todo.id}
-                  text={todo.text}
-                  startDate={todo.startDate}
-                  endDate={todo.endDate}
-                  categories={todo.categories}
+                  key={todo.id}
                   completed={todo.completed}
                   isOnArchives={todo.inArchived}
-                  isOnPeding={todo.pending}
-                  inAll={todo.inAll}
                   onComplete={() => completeTodo(todo.id)}
-                  onArchived={() => archiveTodo(todo.id)}
-                  onDelete={() => deleteTodo(todo.id)}
-                  onUnarchived={() => unArchivedTodo(todo.id)}
-                />
+                >
+                  <TodoItem
+                    key={todo.id}
+                    id={todo.id}
+                    text={todo.text}
+                    startDate={todo.startDate}
+                    endDate={todo.endDate}
+                    completed={todo.completed}
+                    isOnArchives={todo.inArchived}
+
+                    categories={todo.categories}
+                    isOnPeding={todo.pending}
+                    inAll={todo.inAll}
+                    onComplete={() => completeTodo(todo.id)}
+                    onArchived={() => archiveTodo(todo.id)}
+                    onDelete={() => deleteTodo(todo.id)}
+                    onUnarchived={() => unArchivedTodo(todo.id)}
+                  />
                 </DraggableTodoItem>
               )}
             >
@@ -142,6 +141,7 @@ function AppUI() {
             )} */}
             </TodoList>
           </TodoContainer>
+        </TodoMain>
 
         {openModal && (
           <Modal setOpenModal={setOpenModal} openModal={openModal}>

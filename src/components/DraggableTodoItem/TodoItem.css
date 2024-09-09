@@ -74,27 +74,47 @@ box-shadow: 0px 51px 91px 1px rgba(0,0,0,0.46);
   --sky-color-cyan-bold-600: #2563a4;
 }
 
-.TodoItem {
-  background-color: var(--sky-color-cyan-bold-600);
+.Container-Main-Todo{
+  background-color: #2563a4;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 50px auto;
+  margin-bottom: 40px;  
+  border-radius: 6px;
+  box-shadow: 0px 5px 25px rgb(2 13 16 / 50%);
+}
+.Container-Funtionality-Todo{
   display: flex;
-  justify-content: space-between; /* Cambiado a space-between */
-  align-items: center;
-  padding: 16px; /* Añadido padding */
-  border-radius: 0.25rem;
-  box-shadow: -1px 16px 57px -26px rgba(0,0,0,0.61);
-  -webkit-box-shadow: -1px 16px 57px -26px rgba(0,0,0,0.61);
-  -moz-box-shadow: -1px 16px 57px -26px rgba(0,0,0,0.61);
-  
-  
-  border-bottom: 1px solid var(--color);
-  transition: background-color 0.3s ease-in-out;
-  margin: 30px 0 30px 0;
+  flex-direction: column;
+  width: 5%;
+  gap: 20px;
+}
+.Container-Todo{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
+.First-Section-Container{
+  display: flex;
+  justify-content: space-between;
+}
+.Second-Section-Container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+}
+.Second-Section-Container p{
+  color: white;
+  font-size: 15px;
+  font-weight: 100;
+  font-family:monospace;
+}
 .TodoItem-p {
   margin: 0;
-  width: 100%;
+  max-width: 50%;
+  height: 100%;
   font-size: 20px;
   line-height: 24px;
   font-weight: 800;
@@ -200,49 +220,13 @@ box-shadow: 0px 51px 91px 1px rgba(0,0,0,0.46);
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.ContainerAll-information{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  margin:0 20px 0 20px
-} 
-.Container-Information-Orary{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 56Ñ0px;
 }
-.Container-Second-Section{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+.TodoCategory{
+  margin: 8px;
 }
 
 
-
-  .Time{
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 10px;
-    font-weight: 600;
-    gap: 5px;
-    width: 400px;
-  }
-
-.ArrowIcon{
-  width: 25px;
-  height: 25px;
-  position: inherit;
-  background-image: none;
-  background-color: transparent;
-  color: white;
-}
 
 
 /* Styles for the container of buttons return and delete */
@@ -256,4 +240,5 @@ box-shadow: 0px 51px 91px 1px rgba(0,0,0,0.46);
 .icon-drag{
   width: 30px;
   height: 30px;
+  
 }

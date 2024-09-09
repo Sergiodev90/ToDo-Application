@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./TodoSearch.css";
 import { TodoContext } from "../../contexts/TodoContext";
 import { tagStyle } from "../TodoTag";
+import { Padding } from "@mui/icons-material";
 
 
 
@@ -73,29 +74,29 @@ function TodoSearch({ SearchValue, setSearchValue, categories, todos }) {
 
   return (
     <>
-      <div className="search-bar-mobile">
-        <i className="fa-solid fa-magnifying-glass"></i>
-      </div>
 
-      <div className={`search-bar ${isExpanded ? "expanded" : ""}`}>
-        {
+      {
           <div className="dropdown">
             <div id="drop-text" className="dropdown-text">
               
-              <span id="span">{searchCategory}</span>
+ 
+                <span style={{color:"white",display:'flex',alignItems:'center'}}> Category: <span id="span" style={tagStyle(searchCategory)}>{`${searchCategory.category}`}</span></span></div>
               <i id="icon" className="fa-solid fa-chevron-down"></i>
-            </div>
+
 
             <ul id="list" className="dropdown-list">
+
               {categories && categories.map((category) => (
-                  <li className="dropdown-list-item" key={category.id} style={tagStyle(category)} onClick={() => handleSendingValueCategory(category.category)}>
-                    {category.category}
+                  <li className="dropdown-list-item" key={category.id} style={tagStyle(category)} onClick={() => handleSendingValueCategory({category:category.category,color:category.color})}>
+                   {category.category}
                   </li>
                 ))}
               {!categories && <p>No categories yet</p>}
             </ul>
           </div>
         }
+
+      <div className={`search-bar ${isExpanded ? "expanded" : ""}`}>
         <div className="search-box">
           <input
             type="text"
@@ -108,10 +109,7 @@ function TodoSearch({ SearchValue, setSearchValue, categories, todos }) {
           />
         </div>
 
-        <button
-          className="expand-btn"
-          onClick={() => setIsExpanded(!isExpanded)}
-        ></button>
+
       </div>
     </>
   );

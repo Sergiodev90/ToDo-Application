@@ -37,7 +37,7 @@ section {
   .container_TodoTag__TODO{
     display: flex;
     flex-direction: column;
-    margin-bottom: 276px;
+    margin-bottom: 100px;
 
   }
   .container_TodoTag_TodoCalendar{
@@ -97,16 +97,33 @@ section {
 
   .Container-TodoTag {
     width: 411px;
-    height: auto;
+    max-height: 100px;
+    overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding: 40px;
     background-color: #f9f9f9;
     border-radius: 15px;
     /* padding: 10px; */
     background-color: transparent;
     margin: 20px 156px 0 0 ;
 
+  }
+
+  .Container-TodoTag::-webkit-scrollbar {
+    width: 5px;
+    background: transparent; /* Fondo de la barra de desplazamiento transparente */
+  }
+  
+  
+  .Container-TodoTag::-webkit-scrollbar-track {
+    background: transparent; /* Pista de la barra de desplazamiento transparente */
+  }
+  
+  .Container-TodoTag::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.7); /* Thumb (la parte que se mueve) en color gris con un poco de transparencia */
+    border-radius: 10px; /* Opcional: Bordes redondeados para el thumb */
   }
   .container-Recommended-Todos{
     display: flex;

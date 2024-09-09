@@ -2,13 +2,12 @@ import './TodoList.css';
 
 function TodoList(props) {
 
-
   const renderTodos = (todos) => todos.map(props.renderAll);
 
   const filteredTodos = () => {
     let todos = props.searchedTodos;
 
-    if (props.searchCategory !== 'All') {
+    if (props.searchCategory.category !== 'All') {
       todos = props.searchedTodosByCategory;
     }
     if(props.stateClickAll){

@@ -14,11 +14,11 @@ function TodoTag(props) {
           >
             {props.text}
             <span className='close--Delete'>
-                    <DeleteIcon onClick={() =>props.handleDelete(props.id)} className='DeleteIcon'/>
+                    <DeleteIcon onClick={() =>props.handleDelete(props.id)} className='DeleteIcon' />
             </span>
           </span>
           {props.isSelected && (
-            <SketchPicker color={props.color} onChange={props.handleColorChange} />
+            <SketchPicker color={props.color} onChange={props.handleColorChange} className="SketchPick"/>
           )}
         </>
       );

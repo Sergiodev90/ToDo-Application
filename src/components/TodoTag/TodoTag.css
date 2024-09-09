@@ -43,3 +43,7 @@
     color:red;
   } 
 
+  .Container-SketchPicker{
+    z-index: 1;
+  }
+

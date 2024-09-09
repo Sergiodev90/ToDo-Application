@@ -34,9 +34,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns:  40px  50px  50px 50px 50px 350px auto 350px 50px 50px  50px 50px 40px ;
-  grid-template-rows:  5% 5% 5% 10% 60% 15% ;
+  overflow-x: hidden;
 }
 
 
@@ -46,11 +44,3 @@ body {
 }
 
 
-/*---------------------- Mobile Responsive ----------------*/
-
-@media (200px <= width <= 830px){
-  #root {
-      grid-template-columns: 15% 35% 35% 15%;
-      grid-template-rows:  5% 5% 5% 5% 5% 55% 5% 5% 5% 5%  ;
-  }
-}

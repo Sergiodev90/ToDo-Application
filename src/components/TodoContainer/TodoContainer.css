@@ -7,17 +7,29 @@
 }
 
 .TodoContainer--list{
-    position: relative;
     display: flex;
     flex-direction: column;
-    grid-row: 5;
-    grid-column: 7;
     padding: 10px;
     border: solid 1px;
-    border-radius: 2%;
     background-color:#1e2f49;
-
     overflow: visible;
+    width: 100%;
+    overflow-y: auto;
+    height: 89vh;
+}
+.TodoContainer--list::-webkit-scrollbar {
+  width: 5px;
+  background: transparent; /* Fondo de la barra de desplazamiento transparente */
+}
+
+
+.TodoContainer--list::-webkit-scrollbar-track {
+  background: transparent; /* Pista de la barra de desplazamiento transparente */
+}
+
+.TodoContainer--list::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.7); /* Thumb (la parte que se mueve) en color gris con un poco de transparencia */
+  border-radius: 10px; /* Opcional: Bordes redondeados para el thumb */
 }
 .TodoContainer--list-empty{
     justify-content: center;
@@ -25,21 +37,14 @@
 
 
 .TodoContainer-Eyelashes{
-    position: absolute;
     display: flex;
     flex-direction: column;
-    top: 182px;
-    left: 360px;
     height: 90vh;
+    padding: 10px 20px 0 20px;
 }
 
 
 .Eyelashes-TodoContainer-list{
-    width: 200px;
-    height: 58px;
-    position: relative;
-    align-items: center;
-    appearance: none;
     background-color: #357ec2;
     border: 0;
     border-radius: 6px;
@@ -70,7 +75,6 @@
     top: 40px;
     transition: 0.3s ease-in-out;
     
-
 }
 
   
@@ -97,14 +101,10 @@
 }
 /* */
 
-@media (200px <= width <= 830px){
-    .TodoContainer--list{
-        grid-row: 6;
-        grid-column-start: 2;
-        grid-column-end: 4;
-    }
-    .Eyelashes-TodoContainer-list{
-        width: 100px;
-        height: 40px;
-    }
+@media (max-width: 599px)  {
+  /* Estilos para teléfonos móviles en modo horizontal */
+  .TodoContainer-Eyelashes{
+    display: none;
   }
+  
+}

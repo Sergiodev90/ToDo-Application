@@ -1,5 +1,4 @@
 .TodoList {
-  padding: 0 10px 56px 10px;
   list-style: none;
   overflow-x: hidden;
   /* -webkit-box-shadow: 0px 0px 91px 1px rgba(0,0,0,0.75);
@@ -8,6 +7,8 @@
   scroll-margin: 8px;
   vertical-align: top;
   overflow-y: auto;
+  width: 100%;
+
 }
 
 
