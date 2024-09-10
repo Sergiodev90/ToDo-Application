@@ -4,6 +4,7 @@ import { TodoProvider } from "../contexts/TodoContext";
 
 import { DraggableDroppProvider } from "../contexts/DraggableDroppContext";
 import { DndContext } from "@dnd-kit/core";
+import { TodoMobileProvider } from "../contexts/MobileContext";
 
 function App() {
   const [parent, setParent] = useState(null);
@@ -15,6 +16,7 @@ function App() {
   };
 
   return (
+    <TodoMobileProvider>
     <DraggableDroppProvider>
       <DndContext onDragEnd={handleDragEnd}>
         <TodoProvider
@@ -27,6 +29,7 @@ function App() {
         </TodoProvider>
       </DndContext>
     </DraggableDroppProvider>
+    </TodoMobileProvider>
   );
 }
 

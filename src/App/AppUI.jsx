@@ -21,6 +21,9 @@ import { Root } from "./Root";
 import { Modal } from "../components/Modal";
 import { TodoHeader } from "../components/TodoHeader";
 import { DraggableTodoItem } from "../components/DraggableTodoItem";
+import MenuToggle from "../components/mobile/IconsMenu";
+import { ModalMenu } from "../components/mobile/ModalMenu";
+import { TodoMobileContext } from "../contexts/MobileContext";
 
 function AppUI() {
   const {
@@ -49,6 +52,8 @@ function AppUI() {
     unArchivedTodo,
   } = useContext(TodoContext);
 
+  const { isOpenToggleMobile} = useContext(TodoMobileContext)
+
   // const handleDragEnd = (event) =>{
   //   const {over,active} = event
   //   setParent(over ? over.id : null);
@@ -64,16 +69,25 @@ function AppUI() {
     <>
       <Root>
         <TodoHeader>
-          {/* <TodoCounter completed={completedTodos} total={totalTodos} /> */}
+        <div className="ContainerMenuToggle--LogIn">
+            <MenuToggle/>
+            <div>
+              <p>User</p>
+            </div>
+          </div>
+
+          <div className="Container-Search-Todo__Category">
+          
           <TodoSearch
             searchValue={searchValue}
             setSearchValue={setSearchValue}
             categories={Categories}
             todos={todos}
           />
+          </div>
+
         </TodoHeader>
         <TodoMain>
-          
           <TodoContainer
             className="TodoList-Container"
             pendingTodos={pendingTodos}
@@ -148,6 +162,7 @@ function AppUI() {
             <TodoForm />
           </Modal>
         )}
+        
       </Root>
     </>
   );

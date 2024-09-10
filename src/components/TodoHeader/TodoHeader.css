@@ -3,7 +3,45 @@
     /* background-color:#1c304c; */
     background-color: #173351;
     padding: 10px 15px 10px 15px;
-    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
 
+.ContainerMenuToggle--LogIn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+    padding: 15px 10px 15px 10px;
+}
+.Container-Search-Todo__Category{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 899px){
+    .ContainerMenuToggle--LogIn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding-bottom: 15px;
+        box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+    }
+    
+    
+    .Container-Search-Todo__Category{
+        display: flex;
+        justify-content: space-between;
+        gap:50px;
+        align-items: center;
+    }
 }

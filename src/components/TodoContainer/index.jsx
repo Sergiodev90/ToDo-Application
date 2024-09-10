@@ -1,14 +1,14 @@
-
-
-
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { TodoContext } from "../../contexts/TodoContext";
-import {DroppableContainer} from "../DroppableContainer"; // Importa el componente DroppableContainer
+import { DroppableContainer } from "../DroppableContainer"; // Importa el componente DroppableContainer
 
 import "./TodoContainer.css";
+import { TodoMobileContext } from "../../contexts/MobileContext";
+import { ModalMenu } from "../mobile/ModalMenu";
 
 function TodoContainer(props) {
+  const { isMobile, isOpenToggleMobile } = useContext(TodoMobileContext);
   const {
     stateClickCompleted,
     stateClickPending,
@@ -82,12 +82,19 @@ function TodoContainer(props) {
 
   return (
     <>
-      <div className="TodoContainer-Eyelashes">
+      <div
+        className={`${
+          isMobile
+            ? "TodoContainer-Eyelashes inactive"
+            : "TodoContainer-Eyelashes"
+        }`}
+      >
         {componentsRender.map((item) => (
-          
-          <DroppableContainer key={item.name} id={item.name.toLowerCase()} item={item}>
-
-          </DroppableContainer>
+          <DroppableContainer
+            key={item.name}
+            id={item.name.toLowerCase()}
+            item={item}
+          ></DroppableContainer>
         ))}
 
         <CreateTodoButton />
@@ -100,8 +107,22 @@ function TodoContainer(props) {
             : "TodoContainer--list"
         }
       >
-{props.children}
+        {props.children}
       </div>
+      {isMobile && isOpenToggleMobile && (
+        <ModalMenu>
+        <div className="TodoContainer-Eyelashes-Mobile">
+          {componentsRender.map((item) => (
+            <DroppableContainer
+              key={item.name}
+              id={item.name.toLowerCase()}
+              item={item}
+            ></DroppableContainer>
+          ))}
+          <CreateTodoButton />
+        </div>
+        </ModalMenu>
+      )}
     </>
   );
 }

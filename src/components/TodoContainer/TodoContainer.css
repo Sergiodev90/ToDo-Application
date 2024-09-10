@@ -45,6 +45,10 @@
 
 
 .Eyelashes-TodoContainer-list{
+    width: 250px;
+    height: 58px;
+    align-items: center;
+    appearance: none;
     background-color: #357ec2;
     border: 0;
     border-radius: 6px;
@@ -101,10 +105,31 @@
 }
 /* */
 
-@media (max-width: 599px)  {
+@media (min-width: 100px) and (max-width: 899px) {
   /* Estilos para teléfonos móviles en modo horizontal */
-  .TodoContainer-Eyelashes{
+  .TodoContainer-Eyelashes.inactive{
     display: none;
   }
+  .TodoContainer-Eyelashes-Mobile {
+    position: absolute;
+    background-color: #1e2f49;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    padding: 10px 20px 0 20px;
+    animation: slideIn 0.3s ease-in forwards; /* Aplica la animación */
+  }
   
+  /* Definición de la animación */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-200px); /* Posición inicial */
+    }
+    to {
+      transform: translateX(0px); /* Posición final */
+    }
+  }
+  
+
 }

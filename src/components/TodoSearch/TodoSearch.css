@@ -148,13 +148,18 @@
   color: white;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 599px) {
+  .dropdown{
+    width: 160px;
+  }
+  #drop-text{
+    width: 160px;
+    height: 33px;
+  }
  .search-bar{
-  grid-row: 3;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  width: 260px;
-  height: 53px;
+  
+  width: 140px;
+  height: 33px;
   margin: 0 auto;
  }
  .search-bar input{
@@ -173,9 +178,6 @@
 }
 
 
-@media (screen) {
-  
-}
 
 /* @media (200px <= width <= 830px){
   .search-bar{
