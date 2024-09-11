@@ -15,9 +15,7 @@ function DraggableTodoItem(props) {
 
   const handleDragStart = () => {
 
-
     if (dragEnabled) {
-      console.log('Drag start',props.id);
       setIsDragging(true);
     }
   };

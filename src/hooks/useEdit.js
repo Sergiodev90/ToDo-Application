@@ -14,6 +14,7 @@ export function useEdit({newText,id,to,color,state}){
         
       }
       function handleEvent(event){
+        console.log(event)
         if(event.key === 'Enter' && text.length > 0){
             setClick(false)
             console.log(id)
