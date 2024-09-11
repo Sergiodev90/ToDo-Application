@@ -27,8 +27,8 @@
     opacity: 0.9;
     transition: opacity 0.3s, transform 0.3s;
 }
-.Container-SketchPicker{
-    position: fixed;
-    top: 380px;
-    right: 400px;
+@media (min-width:100px) and (max-width:899px){
+    .GooglePicker{
+        width: 200px;
+    }
 }

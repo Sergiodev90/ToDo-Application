@@ -18,7 +18,7 @@ function TodoMobileProvider({children}){
     
     return(
         <TodoMobileContext.Provider value={{
-            isMobile,
+        isMobile,
         isOpenToggleMobile,
         setIsOpenMobile}}>
             {children}

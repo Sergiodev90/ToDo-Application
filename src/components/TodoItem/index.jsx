@@ -8,7 +8,7 @@ import "./AlertToChangeState.css";
 
 function AlertToChangeState(props) {
   return (
-    <div>
+    <>
       <div className="contaienr--return--delente__item">
         <span className="return" onClick={props.onUnarchived}>
           RETURN
@@ -18,7 +18,7 @@ function AlertToChangeState(props) {
           DELETE
         </span>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -64,6 +64,7 @@ function TodoItem(props) {
                 value={text}
                 onKeyDown={handleEvent}
                 onChange={handleEditText}
+              
               />
             )}
             <div className="container-Categories">
@@ -86,6 +87,7 @@ function TodoItem(props) {
 
             <p>{props.startDate}</p>
             <p>{props.endDate}</p>
+            <div className="Funtionality-Delete-unarchive">
             {!props.isOnArchives && (
               <ArchiveBoxIcon
                 className="ArchiveIcon"
@@ -104,6 +106,7 @@ function TodoItem(props) {
                 onUnarchived={props.onUnarchived}
               />
             )}
+            </div>
           </div>
         </div>
         </>

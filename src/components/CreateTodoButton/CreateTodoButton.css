@@ -33,3 +33,10 @@
   animation: pulse 1.5s infinite;
 }
 
+
+@media (min-width: 100px) and (max-width: 899px) {
+  .CreateTodoButton{
+    height: 70px;
+    width: 180px;
+  }
+}

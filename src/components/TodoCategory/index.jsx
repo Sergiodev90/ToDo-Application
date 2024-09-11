@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './TodoCategory.css';
 
-import { SketchPicker } from 'react-color';
+import { ChromePicker,GooglePicker } from 'react-color';
 import { useEdit } from '../../hooks/useEdit';
+import { TodoMobileContext } from '../../contexts/MobileContext';
 
 function TodoCategory(props) {
     const [color, setColor] = useState('');
+    const {isMobile} = useContext(TodoMobileContext)
     const { click, text, handleClick, handleEditText, handleEvent } = useEdit(
         {
             newText:props.category,
@@ -41,10 +43,10 @@ function TodoCategory(props) {
                 />
                 </div >
                 
-                <div className='Container-SketchPicker' > 
+                <div className='Container-Picker' > 
 
-                    <SketchPicker color={color} onChange={handleColorChange} />
-                
+                    {!isMobile && <GooglePicker color={color} onChange={handleColorChange} className="GooglePicker"/>}
+                    {isMobile && <ChromePicker color={color} onChange={handleColorChange} className="ChromePicker"/>}
                 </div>
                 </>
             )}

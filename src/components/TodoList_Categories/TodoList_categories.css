@@ -25,3 +25,10 @@
 .TODO-LIST-CATEGORIES--container::-webkit-scrollbar-thumb:hover {
     background-color: #555; /* Color del scrollbar al pasar el mouse */
 }
+
+@media (min-width:100px) and (max-width:899px) {
+    .TODO-LIST-CATEGORIES--container{
+        width: 120px;
+        overflow-y: auto;
+    }
+}

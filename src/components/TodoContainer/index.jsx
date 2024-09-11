@@ -8,7 +8,9 @@ import { TodoMobileContext } from "../../contexts/MobileContext";
 import { ModalMenu } from "../mobile/ModalMenu";
 
 function TodoContainer(props) {
-  const { isMobile, isOpenToggleMobile } = useContext(TodoMobileContext);
+  const {openModal} = useContext(TodoContext)
+  const { isMobile, isOpenToggleMobile,setIsOpenMobile } = useContext(TodoMobileContext);
+
   const {
     stateClickCompleted,
     stateClickPending,
@@ -30,6 +32,7 @@ function TodoContainer(props) {
           setStateClickAll(true);
           setStateClickArchived(false);
           setStateClickCompleted(false);
+          setIsOpenMobile(false)
         }, 100);
       },
       state: stateClickAll,
@@ -44,6 +47,7 @@ function TodoContainer(props) {
           setStateClickAll(false);
           setStateClickArchived(false);
           setStateClickCompleted(false);
+          setIsOpenMobile(false)
         }, 100);
       },
       state: stateClickPending,
@@ -58,6 +62,7 @@ function TodoContainer(props) {
           setStateClickPending(false);
           setStateClickArchived(false);
           setStateClickCompleted(true);
+          setIsOpenMobile(false)
         }, 100);
       },
       state: stateClickCompleted,
@@ -72,6 +77,7 @@ function TodoContainer(props) {
           setStateClickArchived(true);
           setStateClickCompleted(false);
           setStateClickPending(false);
+          setIsOpenMobile(false)
         }, 100);
       },
       state: stateClickArchived,
@@ -109,7 +115,7 @@ function TodoContainer(props) {
       >
         {props.children}
       </div>
-      {isMobile && isOpenToggleMobile && (
+      {isMobile && isOpenToggleMobile  && (
         <ModalMenu>
         <div className="TodoContainer-Eyelashes-Mobile">
           {componentsRender.map((item) => (

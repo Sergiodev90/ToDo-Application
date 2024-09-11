@@ -106,10 +106,15 @@
 /* */
 
 @media (min-width: 100px) and (max-width: 899px) {
+  .Eyelashes-TodoContainer-list{
+    width: 180px;
+    height: 58px;
+  }
   /* Estilos para teléfonos móviles en modo horizontal */
   .TodoContainer-Eyelashes.inactive{
     display: none;
   }
+
   .TodoContainer-Eyelashes-Mobile {
     position: absolute;
     background-color: #1e2f49;
@@ -130,6 +135,11 @@
       transform: translateX(0px); /* Posición final */
     }
   }
-  
+  .datePickerContainer {
+    width: 85%;
+  }
+  .TodoContainer--list{
+    height: 70vh;
+  }
 
 }
