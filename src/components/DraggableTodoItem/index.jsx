@@ -34,6 +34,13 @@ function DraggableTodoItem(props) {
     setCompleted(!completed);
     props.onComplete();
   };
+  const handleTouchStart = (e) => {
+    e.preventDefault();
+    if (dragEnabled) {
+      handleDragStart();
+      // Additional logic for touch-based dragging can be added here if needed
+    }
+  };
 
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id: props.id,
@@ -66,6 +73,7 @@ function DraggableTodoItem(props) {
           onMouseOver={handleMouseOver}
           onMouseLeave={handleMouseLeave}
           onDragStart={handleDragStart}
+          onTouchStart={handleTouchStart} 
           alt="icon-drag"
           style={transform ? { cursor: 'grabbing' } : { cursor: 'grab' }}
 
