@@ -10,12 +10,11 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border: solid 1px;
-    background-color:#1e2f49;
-    overflow: visible;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,47,73,1) 70%);    overflow: visible;
     width: 100%;
     overflow-y: auto;
-    height: 89vh;
+    height: 763px;
 }
 .TodoContainer--list::-webkit-scrollbar {
   width: 5px;
@@ -39,7 +38,7 @@
 .TodoContainer-Eyelashes{
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 70vh;
     padding: 10px 20px 0 20px;
 }
 
