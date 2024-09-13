@@ -204,8 +204,8 @@ function TodoProvider({ children,id, parent }) {
 
             return {
               ...todo,
-              completed: completed,
-              pending: true,
+              completed: false ,
+              pending: true ,
               inArchived: false,
               inAll: true,
             };
